@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import TestimonialsSection from "./components/Testomonials";
 import { GetInTouch } from "./components/GetInTouch";
+import Footer from "./components/Footer";
 // import Navbar from "./components/NavbarOther";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <HeroSection />
       <TestimonialsSection />
       <GetInTouch />
+      <Footer />
     </div>
   );
 }
