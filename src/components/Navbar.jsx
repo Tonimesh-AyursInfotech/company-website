@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -31,24 +32,24 @@ export default function Navbar() {
               </button>
               {productOpen && (
                 <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-10">
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     className="block px-4 py-2 text-gray-500 hover:bg-blue-50"
                   >
                     Product 1
-                  </a>
-                  <a
-                    href="#"
+                  </Link>
+                  <Link
+                    to="#"
                     className="block px-4 py-2 text-gray-500 hover:bg-blue-50"
                   >
                     Product 2
-                  </a>
-                  <a
-                    href="#"
+                  </Link>
+                  <Link
+                    to="#"
                     className="block px-4 py-2 text-gray-500 hover:bg-blue-50"
                   >
                     Product 3
-                  </a>
+                  </Link>
                 </div>
               )}
             </div>
@@ -93,12 +94,18 @@ export default function Navbar() {
             <a href="#" className="font-medium text-gray-900 transition-colors">
               Blog
             </a>
-            <a href="#" className="font-medium text-gray-900 transition-colors">
+            <Link
+              to="/contactUs"
+              className="font-medium text-gray-900 transition-colors"
+            >
               Contact Us
-            </a>
-            <a href="#" className="font-medium text-gray-900 transition-colors">
+            </Link>
+            <Link
+              href="#"
+              className="font-medium text-gray-900 transition-colors"
+            >
               About Us
-            </a>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -133,15 +140,15 @@ export default function Navbar() {
               </button>
               {servicesOpen && (
                 <div className="pl-4 space-y-2">
-                  <a href="#" className="block text-gray-500 py-1">
-                    Service 1
-                  </a>
-                  <a href="#" className="block text-gray-500 py-1">
-                    Service 2
-                  </a>
-                  <a href="#" className="block text-gray-500 py-1">
-                    Service 3
-                  </a>
+                  <Link href="#" className="block text-gray-500 py-1">
+                    toice 1
+                  </Link>
+                  <Link href="#" className="block text-gray-500 py-1">
+                    toice 2
+                  </Link>
+                  <Link href="#" className="block text-gray-500 py-1">
+                    toice 3
+                  </Link>
                 </div>
               )}
 
@@ -158,30 +165,30 @@ export default function Navbar() {
               </button>
               {productOpen && (
                 <div className="pl-4 space-y-2">
-                  <a href="#" className="block text-gray-500 py-1">
-                    Product 1
-                  </a>
-                  <a href="#" className="block text-gray-500 py-1">
-                    Product 2
-                  </a>
-                  <a href="#" className="block text-gray-500 py-1">
-                    Product 3
-                  </a>
+                  <Link href="#" className="block text-gray-500 py-1">
+                    touct 1
+                  </Link>
+                  <Link href="#" className="block text-gray-500 py-1">
+                    touct 2
+                  </Link>
+                  <Link href="#" className="block text-gray-500 py-1">
+                    touct 3
+                  </Link>
                 </div>
               )}
 
-              <a href="#" className="font-medium text-gray-900 py-2">
-                Our Work
-              </a>
-              <a href="#" className="font-medium text-gray-900 py-2">
-                Blog
-              </a>
-              <a href="#" className="font-medium text-gray-900 py-2">
-                Contact Us
-              </a>
-              <a href="#" className="font-medium text-gray-900 py-2">
-                About Us
-              </a>
+              <Link href="#" className="font-medium text-gray-900 py-2">
+                toWork
+              </Link>
+              <Link href="#" className="font-medium text-gray-900 py-2">
+                to
+              </Link>
+              <Link href="#" className="font-medium text-gray-900 py-2">
+                toact Us
+              </Link>
+              <Link href="#" className="font-medium text-gray-900 py-2">
+                tot Us
+              </Link>
             </div>
           </div>
         )}

@@ -1,24 +1,22 @@
 import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import HomePage from "./Pages/Home";
 import Navbar from "./components/Navbar";
-import HeroSection from "./components/HeroSection";
-import TestimonialsSection from "./components/Testomonials";
-import { GetInTouch } from "./components/GetInTouch";
 import Footer from "./components/Footer";
-import CareerSection from "./components/CareerSection";
-import OurServices from "./components/OurServices";
-import TechStackCarousel from "./components/TechStackCarousel";
-import CloudIdentityHero from "./components/CloudIdentityHero";
-import TechIntroSection from "./components/TechIntroSection";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import GetInTouch from "./components/GetInTouch";
 function App() {
   return (
-    <div className=" mx-auto">
-      <Navbar />
-      <HomePage />
-      <Footer />
-    </div>
+    <Router>
+      <div className="mx-auto">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/contactUs" element={<GetInTouch />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

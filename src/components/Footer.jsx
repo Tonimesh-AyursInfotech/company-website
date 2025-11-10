@@ -100,16 +100,16 @@ export const Footer = () => {
             </h3>
             <div className="space-y-3 text-gray-600">
               <p className="text-sm leading-relaxed">
-                200 South Executive Drive
+                L-31, FF, L Block, Mahavir Enclave
                 <br />
-                Suite 101 Brookfield, WI 53005
+                New Delhi, India
               </p>
               <p>
                 <a
-                  href="tel:262-320-0480"
+                  href="tel:+91 9871 32 9458"
                   className="hover:text-green-500 transition-colors"
                 >
-                  262-320-0480
+                  +91 9871 32 9458
                 </a>
               </p>
               <p>
@@ -160,7 +160,7 @@ export const Footer = () => {
           </div>
 
           {/* Locations Section */}
-          <div>
+          {/* <div>
             <h3 className="text-gray-900 font-semibold text-lg mb-4">
               Locations
             </h3>
@@ -188,7 +188,7 @@ export const Footer = () => {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Solution Section - Now spanning full width below */}
         </div>

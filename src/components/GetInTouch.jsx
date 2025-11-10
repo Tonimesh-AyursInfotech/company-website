@@ -171,8 +171,8 @@ export const GetInTouch = () => {
                     </svg>
                   </div>
                   <div className="text-base lg:text-lg">
-                    <div>Somewhere in India</div>
-                    <div>Somewhere , DL 332002,etc</div>
+                    <div>L-31, FF, L Block, Mahavir Enclave</div>
+                    <div>New Delhi, India</div>
                   </div>
                 </div>
 
@@ -190,7 +190,7 @@ export const GetInTouch = () => {
                     href="tel:262-320-0480"
                     className="text-base lg:text-lg hover:text-green-400 transition-colors underline"
                   >
-                    123-456-7890
+                    +91 9871 32 9458{" "}
                   </a>
                 </div>
               </div>
