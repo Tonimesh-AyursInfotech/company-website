@@ -159,6 +159,37 @@ export const Footer = () => {
             </div>
           </div>
 
+          {/* Solution Section */}
+          <div className="border-t border-gray-200 pt-6 pb-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+              <div className="lg:col-span-1"></div>
+              <div>
+                <h3 className="text-gray-900 font-semibold text-lg mb-4">
+                  Solution
+                </h3>
+                <ul className="space-y-3">
+                  <li>
+                    <a
+                      href="#"
+                      className="text-gray-600 hover:text-green-500 transition-colors"
+                    >
+                      Services
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="text-gray-600 hover:text-green-500 transition-colors"
+                    >
+                      Case Studies
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div className="lg:col-span-3"></div>
+            </div>
+          </div>
+
           {/* Locations Section */}
           {/* <div>
             <h3 className="text-gray-900 font-semibold text-lg mb-4">
@@ -191,37 +222,6 @@ export const Footer = () => {
           </div> */}
 
           {/* Solution Section - Now spanning full width below */}
-        </div>
-
-        {/* Solution Section */}
-        <div className="border-t border-gray-200 pt-6 pb-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-            <div className="lg:col-span-1"></div>
-            <div>
-              <h3 className="text-gray-900 font-semibold text-lg mb-4">
-                Solution
-              </h3>
-              <ul className="space-y-3">
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-600 hover:text-green-500 transition-colors"
-                  >
-                    Services
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-600 hover:text-green-500 transition-colors"
-                  >
-                    Case Studies
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="lg:col-span-3"></div>
-          </div>
         </div>
 
         {/* Copyright */}

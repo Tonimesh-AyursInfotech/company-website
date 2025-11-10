@@ -8,45 +8,58 @@ export default function Navbar() {
   const [productOpen, setProductOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-sm">
+    <nav className="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b-2 border-transparent relative">
+      {/* Beautiful Bottom Border Gradient */}
+      <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-60" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <div className="text-2xl font-bold tracking-tight gradient-text">
+          <Link
+            to="/"
+            className="text-2xl font-bold tracking-tight bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 bg-clip-text text-transparent hover:from-blue-700 hover:via-indigo-700 hover:to-blue-800 transition-all"
+          >
             AYURS INFOTECH
-            <div className="text-sm mt-[-7px] tracking-wider  gradient-text">
+            <div className="text-sm mt-[-7px] tracking-wider bg-gradient-to-r from-blue-500 via-indigo-500 to-blue-600 bg-clip-text text-transparent">
               Create Your Identity
             </div>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {/* Product Dropdown */}
-            <div className="relative">
+            <div className="relative group">
               <button
-                onClick={() => setProductOpen(!productOpen)}
-                className="flex items-center font-medium text-gray-900 transition-colors"
+                onClick={() => {
+                  setProductOpen(!productOpen);
+                  setServicesOpen(false);
+                }}
+                className="flex items-center font-medium text-gray-700 hover:text-blue-600 transition-all duration-200 group"
               >
                 Product
-                <ChevronDown className="ml-1 h-4 w-4" />
+                <ChevronDown
+                  className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                    productOpen ? "rotate-180" : ""
+                  }`}
+                />
               </button>
               {productOpen && (
-                <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-10">
+                <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl py-2 z-10 border border-blue-100/50 backdrop-blur-sm">
                   <Link
                     to="#"
-                    className="block px-4 py-2 text-gray-500 hover:bg-blue-50"
+                    className="block px-4 py-3 text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors rounded-lg mx-2 font-medium"
                   >
                     Product 1
                   </Link>
                   <Link
                     to="#"
-                    className="block px-4 py-2 text-gray-500 hover:bg-blue-50"
+                    className="block px-4 py-3 text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors rounded-lg mx-2 font-medium"
                   >
                     Product 2
                   </Link>
                   <Link
                     to="#"
-                    className="block px-4 py-2 text-gray-500 hover:bg-blue-50"
+                    className="block px-4 py-3 text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors rounded-lg mx-2 font-medium"
                   >
                     Product 3
                   </Link>
@@ -55,31 +68,38 @@ export default function Navbar() {
             </div>
 
             {/* Services Dropdown */}
-            <div className="relative">
+            <div className="relative group">
               <button
-                onClick={() => setServicesOpen(!servicesOpen)}
-                className="flex items-center font-medium text-gray-900 transition-colors"
+                onClick={() => {
+                  setServicesOpen(!servicesOpen);
+                  setProductOpen(false);
+                }}
+                className="flex items-center font-medium text-gray-700 hover:text-blue-600 transition-all duration-200"
               >
                 Services
-                <ChevronDown className="ml-1 h-4 w-4" />
+                <ChevronDown
+                  className={`ml-1 h-4 w-4 transition-transform duration-200 ${
+                    servicesOpen ? "rotate-180" : ""
+                  }`}
+                />
               </button>
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-10">
+                <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl py-2 z-10 border border-blue-100/50 backdrop-blur-sm">
                   <a
                     href="#"
-                    className="block px-4 py-2 text-gray-500 hover:bg-blue-50"
+                    className="block px-4 py-3 text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors rounded-lg mx-2 font-medium"
                   >
                     Service 1
                   </a>
                   <a
                     href="#"
-                    className="block px-4 py-2 text-gray-500 hover:bg-blue-50"
+                    className="block px-4 py-3 text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors rounded-lg mx-2 font-medium"
                   >
                     Service 2
                   </a>
                   <a
                     href="#"
-                    className="block px-4 py-2 text-gray-500 hover:bg-blue-50"
+                    className="block px-4 py-3 text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors rounded-lg mx-2 font-medium"
                   >
                     Service 3
                   </a>
@@ -88,23 +108,33 @@ export default function Navbar() {
             </div>
 
             {/* Other Links */}
-            <a href="#" className="font-medium text-gray-900 transition-colors">
+            <a
+              href="#"
+              className="font-medium text-gray-700 hover:text-blue-600 transition-all duration-200 relative group"
+            >
               Our Work
-            </a>
-            <a href="#" className="font-medium text-gray-900 transition-colors">
-              Blog
+              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-blue-600 transition-all duration-200 group-hover:w-full" />
             </a>
             <Link
-              to="/contactUs"
-              className="font-medium text-gray-900 transition-colors"
+              to="/careers"
+              className="font-medium text-gray-700 hover:text-blue-600 transition-all duration-200 relative group"
             >
-              Contact Us
+              Careers
+              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-blue-600 transition-all duration-200 group-hover:w-full" />
             </Link>
             <Link
-              href="#"
-              className="font-medium text-gray-900 transition-colors"
+              to="/contactUs"
+              className="font-medium text-gray-700 hover:text-blue-600 transition-all duration-200 relative group"
+            >
+              Contact Us
+              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-blue-600 transition-all duration-200 group-hover:w-full" />
+            </Link>
+            <Link
+              to="/about"
+              className="font-medium text-gray-700 hover:text-blue-600 transition-all duration-200 relative group"
             >
               About Us
+              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-blue-600 transition-all duration-200 group-hover:w-full" />
             </Link>
           </div>
 
@@ -112,7 +142,7 @@ export default function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-blue-500 hover:text-blue-500"
+              className="text-blue-600 hover:text-blue-700 transition-colors p-2 rounded-lg hover:bg-blue-50"
             >
               {mobileMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -125,69 +155,102 @@ export default function Navbar() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden pb-4">
-            <div className="flex flex-col space-y-3">
+          <div className="md:hidden pb-4 border-t border-blue-100/50 mt-2 pt-4">
+            <div className="flex flex-col space-y-1">
+              {/* Services Dropdown Mobile */}
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
-                className="flex items-center justify-between font-medium text-gray-900 py-2"
+                className="flex items-center justify-between font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 py-3 px-3 rounded-lg transition-all"
               >
                 Services
                 <ChevronDown
-                  className={`h-4 w-4 transition-transform ${
+                  className={`h-4 w-4 transition-transform duration-200 ${
                     servicesOpen ? "rotate-180" : ""
                   }`}
                 />
               </button>
               {servicesOpen && (
-                <div className="pl-4 space-y-2">
-                  <Link href="#" className="block text-gray-500 py-1">
-                    toice 1
+                <div className="pl-4 space-y-1 bg-blue-50/30 py-2 rounded-lg">
+                  <Link
+                    to="#"
+                    className="block text-gray-600 hover:text-blue-700 py-2 px-3 rounded-lg hover:bg-white transition-all"
+                  >
+                    Service 1
                   </Link>
-                  <Link href="#" className="block text-gray-500 py-1">
-                    toice 2
+                  <Link
+                    to="#"
+                    className="block text-gray-600 hover:text-blue-700 py-2 px-3 rounded-lg hover:bg-white transition-all"
+                  >
+                    Service 2
                   </Link>
-                  <Link href="#" className="block text-gray-500 py-1">
-                    toice 3
+                  <Link
+                    to="#"
+                    className="block text-gray-600 hover:text-blue-700 py-2 px-3 rounded-lg hover:bg-white transition-all"
+                  >
+                    Service 3
                   </Link>
                 </div>
               )}
 
+              {/* Product Dropdown Mobile */}
               <button
                 onClick={() => setProductOpen(!productOpen)}
-                className="flex items-center justify-between font-medium text-gray-900 py-2"
+                className="flex items-center justify-between font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 py-3 px-3 rounded-lg transition-all"
               >
                 Product
                 <ChevronDown
-                  className={`h-4 w-4 transition-transform ${
+                  className={`h-4 w-4 transition-transform duration-200 ${
                     productOpen ? "rotate-180" : ""
                   }`}
                 />
               </button>
               {productOpen && (
-                <div className="pl-4 space-y-2">
-                  <Link href="#" className="block text-gray-500 py-1">
-                    touct 1
+                <div className="pl-4 space-y-1 bg-blue-50/30 py-2 rounded-lg">
+                  <Link
+                    to="#"
+                    className="block text-gray-600 hover:text-blue-700 py-2 px-3 rounded-lg hover:bg-white transition-all"
+                  >
+                    Product 1
                   </Link>
-                  <Link href="#" className="block text-gray-500 py-1">
-                    touct 2
+                  <Link
+                    to="#"
+                    className="block text-gray-600 hover:text-blue-700 py-2 px-3 rounded-lg hover:bg-white transition-all"
+                  >
+                    Product 2
                   </Link>
-                  <Link href="#" className="block text-gray-500 py-1">
-                    touct 3
+                  <Link
+                    to="#"
+                    className="block text-gray-600 hover:text-blue-700 py-2 px-3 rounded-lg hover:bg-white transition-all"
+                  >
+                    Product 3
                   </Link>
                 </div>
               )}
 
-              <Link href="#" className="font-medium text-gray-900 py-2">
-                toWork
+              {/* Other Links Mobile */}
+              <Link
+                to="#"
+                className="font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 py-3 px-3 rounded-lg transition-all"
+              >
+                Our Work
               </Link>
-              <Link href="#" className="font-medium text-gray-900 py-2">
-                to
+              <Link
+                to="/careers"
+                className="font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 py-3 px-3 rounded-lg transition-all"
+              >
+                Careers
               </Link>
-              <Link href="#" className="font-medium text-gray-900 py-2">
-                toact Us
+              <Link
+                to="/contactUs"
+                className="font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 py-3 px-3 rounded-lg transition-all"
+              >
+                Contact Us
               </Link>
-              <Link href="#" className="font-medium text-gray-900 py-2">
-                tot Us
+              <Link
+                to="/about"
+                className="font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 py-3 px-3 rounded-lg transition-all"
+              >
+                About Us
               </Link>
             </div>
           </div>
