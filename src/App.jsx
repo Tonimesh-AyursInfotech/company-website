@@ -5,6 +5,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import TestimonialsSection from "./components/Testomonials";
+import { GetInTouch } from "./components/GetInTouch";
 // import Navbar from "./components/NavbarOther";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Navbar />
       <HeroSection />
       <TestimonialsSection />
+      <GetInTouch />
     </div>
   );
 }
