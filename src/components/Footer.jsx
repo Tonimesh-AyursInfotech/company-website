@@ -77,7 +77,7 @@ export const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="#"
+                  href="/about-us"
                   className="text-gray-600 hover:text-green-500 transition-colors"
                 >
                   About Us
@@ -85,7 +85,7 @@ export const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/careers"
                   className="text-gray-600 hover:text-green-500 transition-colors"
                 >
                   Careers
@@ -93,20 +93,20 @@ export const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/contactUs"
                   className="text-gray-600 hover:text-green-500 transition-colors"
                 >
                   Contact Us
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a
                   href="#"
                   className="text-gray-600 hover:text-green-500 transition-colors"
                 >
                   Privacy Policy
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
 
@@ -118,28 +118,28 @@ export const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="#"
+                  href="/our-work"
                   className="text-gray-600 hover:text-green-500 transition-colors"
                 >
                   Our Work
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a
                   href="#"
                   className="text-gray-600 hover:text-green-500 transition-colors"
                 >
                   Blog
                 </a>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <a
                   href="#"
                   className="text-gray-600 hover:text-green-500 transition-colors"
                 >
                   Site Map
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
 
@@ -185,7 +185,7 @@ export const Footer = () => {
                 <ul className="space-y-3">
                   <li>
                     <a
-                      href="#"
+                      href="/services-web-devlopment"
                       className="text-gray-600 hover:text-green-500 transition-colors whitespace-nowrap"
                     >
                       Web Development
@@ -193,15 +193,23 @@ export const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="/services-app-devlopment"
                       className="text-gray-600 hover:text-green-500 transition-colors whitespace-nowrap"
                     >
                       App Development
                     </a>
                   </li>
+                  <li>
+                    <a
+                      href="/services-data-security"
+                      className="text-gray-600 hover:text-green-500 transition-colors whitespace-nowrap"
+                    >
+                      Data Security
+                    </a>
+                  </li>
                     <li>
                     <a
-                      href="#"
+                      href="/services-data-analytics"
                       className="text-gray-600 hover:text-green-500 transition-colors whitespace-nowrap"
                     >
                       Data Analytics
@@ -209,7 +217,7 @@ export const Footer = () => {
                   </li>
                     <li>
                     <a
-                      href="#"
+                      href="/services-it-acquisition"
                       className="text-gray-600 hover:text-green-500 transition-colors whitespace-nowrap"
                     >
                       Talent Acquisition

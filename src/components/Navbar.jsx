@@ -98,6 +98,12 @@ export default function Navbar() {
                   >
                     App Development
                   </a>
+                   <a
+                    href="/services-data-security"
+                    className="block px-4 py-3 text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors rounded-lg mx-2 font-medium"
+                  >
+                    Data Security 
+                  </a>
                   <a
                     href="/services-data-analytics"
                     className="block px-4 py-3 text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors rounded-lg mx-2 font-medium"
@@ -116,7 +122,7 @@ export default function Navbar() {
 
             {/* Other Links */}
             <a
-              href="#"
+              href="/our-work"
               className="font-medium text-gray-700 hover:text-blue-600 transition-all duration-200 relative group"
             >
               Our Work
@@ -137,7 +143,7 @@ export default function Navbar() {
               <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-blue-600 transition-all duration-200 group-hover:w-full" />
             </Link>
             <Link
-              to="/about"
+              to="/about-us"
               className="font-medium text-gray-700 hover:text-blue-600 transition-all duration-200 relative group"
             >
               About Us
