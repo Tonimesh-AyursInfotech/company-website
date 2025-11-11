@@ -10,6 +10,9 @@ import WebDevelopment from "./components/servicess/WebDevelopment";
 import AppDevelopmentPage from "./components/servicess/AppDevelopmentPage";
 import DataAnalyticsPage from "./components/servicess/DataAnalyticsPage";
 import ITTalentAcquisitionPage from "./components/servicess/ITTalentAcquisitionPage";
+import DataSecurityPage from "./components/servicess/DataSecurityPage";
+import OurWorkPage from "./components/OurWorkPage";
+import AboutUsPage from "./components/AboutUsPage";
 function App() {
   return (
     <Router>
@@ -23,6 +26,12 @@ function App() {
           <Route path="/services-app-devlopment" element={<AppDevelopmentPage />} />
           <Route path="/services-data-analytics" element={<DataAnalyticsPage />} />
           <Route path="/services-it-acquisition" element={<ITTalentAcquisitionPage />} />
+          <Route path="/services-data-security" element={<DataSecurityPage />} />
+          <Route path="/our-work" element={<OurWorkPage />} />
+          <Route path="/about-us" element={<AboutUsPage />} />
+
+
+
 
 
 

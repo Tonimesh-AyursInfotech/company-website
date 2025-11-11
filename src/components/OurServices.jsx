@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Code, Smartphone, BarChart3, Users, ArrowRight } from "lucide-react";
+import { Code, Smartphone, BarChart3, Users, ArrowRight, Shield } from "lucide-react";
 
 export const OurServices = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -23,8 +23,16 @@ export const OurServices = () => {
         "Design and build intuitive mobile and desktop apps that offer seamless, user-focused experiences.",
       gradient: "from-indigo-600 to-purple-700",
     },
+ {
+  id: 3,
+  icon: Shield,
+  title: "Data Security",
+  subtitle: "Protect Your Digital Assets",
+  description: "Implement robust security measures and encryption protocols to safeguard your sensitive data and ensure regulatory compliance.",
+  gradient: "from-red-600 to-orange-700",
+},
     {
-      id: 3,
+      id: 4,
       icon: BarChart3,
       title: "Data Analytics",
       subtitle: "Transform Data into Decisions",
@@ -33,7 +41,7 @@ export const OurServices = () => {
       gradient: "from-blue-700 to-cyan-600",
     },
     {
-      id: 4,
+      id: 5,
       icon: Users,
       title: "IT Talent Acquisition",
       subtitle: "Build Your Winning Team",
