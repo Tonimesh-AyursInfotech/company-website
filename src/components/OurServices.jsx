@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { Code, Smartphone, BarChart3, Users, ArrowRight, Shield } from "lucide-react";
+import {
+  Code,
+  Smartphone,
+  BarChart3,
+  Users,
+  ArrowRight,
+  Shield,
+} from "lucide-react";
 
 export const OurServices = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -23,14 +30,15 @@ export const OurServices = () => {
         "Design and build intuitive mobile and desktop apps that offer seamless, user-focused experiences.",
       gradient: "from-indigo-600 to-purple-700",
     },
- {
-  id: 3,
-  icon: Shield,
-  title: "Data Security",
-  subtitle: "Protect Your Digital Assets",
-  description: "Implement robust security measures and encryption protocols to safeguard your sensitive data and ensure regulatory compliance.",
-  gradient: "from-red-600 to-orange-700",
-},
+    {
+      id: 3,
+      icon: Shield,
+      title: "Data Security",
+      subtitle: "Protect Your Digital Assets",
+      description:
+        "Implement robust security measures and encryption protocols to safeguard your sensitive data and ensure regulatory compliance.",
+      gradient: "from-red-600 to-orange-700",
+    },
     {
       id: 4,
       icon: BarChart3,
@@ -124,7 +132,7 @@ export const OurServices = () => {
                     </p>
 
                     {/* Learn More Link */}
-                    <div className="flex items-center text-blue-600 font-semibold group/link">
+                    <div className="flex items-center text-[var(--brand-prim)] font-semibold group/link">
                       <span className="group-hover:text-indigo-600 transition-colors duration-300">
                         Learn More
                       </span>
@@ -155,7 +163,7 @@ export const OurServices = () => {
           <p className="text-gray-600 mb-6 text-lg">
             Ready to transform your business with our expertise?
           </p>
-          <button className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 group">
+          <button className="inline-flex items-center gap-3 bg-[var(--brand-prim)] hover:from-blue-600 hover:to-indigo-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 group">
             Get Started Today
             <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" />
           </button>

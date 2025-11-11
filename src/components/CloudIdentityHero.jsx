@@ -41,7 +41,7 @@ export default function CloudIdentityHero() {
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-5 md:mb-6 leading-tight px-2">
                 Building Your Cloud Identity,
                 <br />
-                <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 bg-clip-text text-transparent">
+                <span className="bg-[var(--brand-prim)] bg-clip-text text-transparent">
                   One Innovation at a Time
                 </span>
               </h1>

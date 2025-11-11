@@ -192,7 +192,7 @@ export const TechStackCarousel = () => {
       <div className="container mx-auto px-4 max-w-7xl relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="text-sm font-semibold tracking-wider text-blue-600 uppercase bg-blue-100 px-4 py-2 rounded-full">
+          <span className="text-sm font-semibold tracking-wider text-[var(--brand-light)] uppercase bg-[var(--brand-prim)] px-4 py-2 rounded-full">
             Our Technology Stack
           </span>
 

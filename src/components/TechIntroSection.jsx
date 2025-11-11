@@ -2,7 +2,7 @@ import React from "react";
 
 export default function TechIntroSection() {
   return (
-    <section className="relative w-full overflow-hidden bg-gradient-to-br from-blue-500 via-blue-900 to-blue-500">
+    <section className="relative w-full overflow-hidden bg-[var(--brand-prim)]">
       {/* Background Pattern - Matching GetInTouch */}
       <div className="absolute inset-0 opacity-10">
         <div

@@ -101,7 +101,7 @@ export const CareerSection = () => {
                 <div className="lg:ml-6">
                   <button
                     onClick={() => handleApplyNow(job.title)}
-                    className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-200 whitespace-nowrap shadow-md hover:shadow-lg w-full lg:w-auto"
+                    className="bg-[var(--brand-prim)] text-[var(--brand-light)] font-semibold px-8 py-3 rounded-lg transition-colors duration-200 whitespace-nowrap shadow-md hover:shadow-lg w-full lg:w-auto"
                   >
                     Apply Now
                   </button>
@@ -115,7 +115,7 @@ export const CareerSection = () => {
         <div className="text-center">
           <button
             onClick={handleViewMore}
-            className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-10 py-4 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl group"
+            className="inline-flex items-center gap-2 bg-sky-500 hover:bg-sky-600 text-white font-semibold px-10 py-4 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl group"
           >
             View More Openings
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />

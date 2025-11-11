@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+:root {
+  --brand-prim: #0284c7;
+  --brand-blue: #1e40af;
+  --brand-sky: #0ea5e9;
+  --brand-light: #dbeafe;
+}
+
 body {
   font-family: "Josefin Sans", sans-serif;
   font-optical-sizing: auto;

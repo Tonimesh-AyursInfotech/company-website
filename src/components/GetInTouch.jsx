@@ -122,7 +122,7 @@ export const GetInTouch = () => {
   };
 
   return (
-    <div className="min-h-screen bg-sky-600 relative overflow-hidden">
+    <div className="min-h-screen bg-[var(--brand-prim)] relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div
@@ -322,7 +322,7 @@ export const GetInTouch = () => {
 
               <button
                 type="submit"
-                className="bg-green-400 hover:bg-green-500 text-white font-semibold px-10 py-3 rounded-full shadow-lg transition"
+                className="bg-[var(--brand-sky)] text-white font-semibold px-10 py-3 rounded-full shadow-lg transition"
               >
                 Submit
               </button>

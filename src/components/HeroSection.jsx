@@ -11,7 +11,7 @@ const HeroSection = () => {
           alt="Office background"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-blue-900/40"></div>
+        <div className="absolute inset-0 bg-sky-700/40"></div>
       </div>
 
       {/* Content */}
@@ -40,7 +40,7 @@ const HeroSection = () => {
           {/* Stat 1 */}
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <div className="h-1 w-12 bg-blue-500 rounded"></div>
+              <div className="h-1 w-12 bg-[var(--brand-prim)] rounded"></div>
             </div>
             <div className="text-5xl font-bold text-white mb-2">35+</div>
             <div className="text-gray-300 text-lg">Global Clientele</div>
@@ -49,7 +49,7 @@ const HeroSection = () => {
           {/* Stat 2 */}
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <div className="h-1 w-12 bg-blue-500 rounded"></div>
+              <div className="h-1 w-12 bg-[var(--brand-prim)] rounded"></div>
             </div>
             <div className="text-5xl font-bold text-white mb-2">300+</div>
             <div className="text-gray-300 text-lg">Associates</div>
@@ -58,7 +58,7 @@ const HeroSection = () => {
           {/* Stat 3 */}
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <div className="h-1 w-12 bg-blue-500 rounded"></div>
+              <div className="h-1 w-12 bg-[var(--brand-prim)] rounded"></div>
             </div>
             <div className="text-5xl font-bold text-white mb-2">100+</div>
             <div className="text-gray-300 text-lg">Integrations</div>

@@ -13,10 +13,10 @@ const HomePage = () => {
     <>
       <HeroSection />
       <CloudIdentityHero />
-      <OurServices />
       <TechIntroSection />
-      <TechStackCarousel />
+      <OurServices />
       <TestimonialsSection />
+      <TechStackCarousel />
       {/* <CareerSection /> */}
       <GetInTouch />
     </>

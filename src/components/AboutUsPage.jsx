@@ -1,5 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { CheckCircle, Target, Eye, Heart, Star, Users, Globe, Zap } from "lucide-react";
+import {
+  CheckCircle,
+  Target,
+  Eye,
+  Heart,
+  Star,
+  Users,
+  Globe,
+  Zap,
+} from "lucide-react";
 import GetInTouch from "./GetInTouch";
 
 const AboutUsPage = () => {
@@ -9,45 +18,49 @@ const AboutUsPage = () => {
     {
       icon: Target,
       title: "Our Vision",
-      description: "To be the leading global IT services provider, driving digital transformation and innovation across industries through cutting-edge technology solutions.",
-      gradient: "from-blue-500 to-indigo-600"
+      description:
+        "To be the leading global IT services provider, driving digital transformation and innovation across industries through cutting-edge technology solutions.",
+      gradient: "from-blue-500 to-indigo-600",
     },
     {
       icon: Eye,
       title: "Our Mission",
-      description: "Empower businesses with transformative technology solutions that enhance efficiency, drive growth, and create sustainable competitive advantages in the digital era.",
-      gradient: "from-purple-500 to-pink-600"
+      description:
+        "Empower businesses with transformative technology solutions that enhance efficiency, drive growth, and create sustainable competitive advantages in the digital era.",
+      gradient: "from-purple-500 to-pink-600",
     },
     {
       icon: Heart,
       title: "Our Philosophy",
-      description: "We believe in building lasting partnerships through trust, transparency, and exceptional service delivery that exceeds client expectations.",
-      gradient: "from-green-500 to-emerald-600"
+      description:
+        "We believe in building lasting partnerships through trust, transparency, and exceptional service delivery that exceeds client expectations.",
+      gradient: "from-green-500 to-emerald-600",
     },
     {
       icon: Star,
       title: "Our Motto",
-      description: "Innovate. Transform. Succeed. Turning technological challenges into business opportunities through expertise and dedication.",
-      gradient: "from-orange-500 to-red-600"
-    }
+      description:
+        "Innovate. Transform. Succeed. Turning technological challenges into business opportunities through expertise and dedication.",
+      gradient: "from-orange-500 to-red-600",
+    },
   ];
 
   const stats = [
     {
       number: "35+",
       label: "Global Clientele",
-      icon: Globe
+      icon: Globe,
     },
     {
       number: "300+",
       label: "Associates",
-      icon: Users
+      icon: Users,
     },
     {
       number: "100+",
       label: "Integrations",
-      icon: Zap
-    }
+      icon: Zap,
+    },
   ];
 
   const companyEvents = [
@@ -58,7 +71,7 @@ const AboutUsPage = () => {
     "/api/placeholder/400/300?text=Training+Session",
     "/api/placeholder/400/300?text=Company+Retreat",
     "/api/placeholder/400/300?text=Innovation+Day",
-    "/api/placeholder/400/300?text=Team+Building"
+    "/api/placeholder/400/300?text=Team+Building",
   ];
 
   useEffect(() => {
@@ -72,7 +85,7 @@ const AboutUsPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative w-full overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 min-h-[60vh] flex items-center">
+      <section className="relative w-full overflow-hidden bg-[var(--brand-prim)] min-h-[60vh] flex items-center">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div
@@ -90,17 +103,18 @@ const AboutUsPage = () => {
         <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center">
           <div className="max-w-4xl mx-auto">
             <div className="inline-block mb-6">
-              <span className="text-sm font-semibold tracking-wider text-blue-300 uppercase bg-blue-800/50 backdrop-blur-sm px-4 py-2 rounded-full border border-blue-700/30">
+              <span className="text-sm font-semibold tracking-wider text-blue-300 uppercase bg-[var(--brand-prim)]/50 backdrop-blur-sm px-4 py-2 rounded-full border border-blue-700/30">
                 About Us
               </span>
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               Ayurs Infotech
             </h1>
-            
+
             <p className="text-xl md:text-2xl text-blue-100/90 max-w-3xl mx-auto leading-relaxed">
-              An IT services company specializing in providing top-notch solutions that drive business growth and digital transformation.
+              An IT services company specializing in providing top-notch
+              solutions that drive business growth and digital transformation.
             </p>
           </div>
         </div>
@@ -114,10 +128,11 @@ const AboutUsPage = () => {
               WHO WE ARE
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-12">
-              Ayurs Infotech is a global IT services and consulting company that empowers organizations 
-              through innovative technology solutions. We specialize in web development, mobile applications, 
-              data analytics, and IT talent acquisition, delivering comprehensive services that drive 
-              digital transformation and business growth.
+              Ayurs Infotech is a global IT services and consulting company that
+              empowers organizations through innovative technology solutions. We
+              specialize in web development, mobile applications, data
+              analytics, and IT talent acquisition, delivering comprehensive
+              services that drive digital transformation and business growth.
             </p>
 
             {/* Statistics */}
@@ -143,9 +158,11 @@ const AboutUsPage = () => {
 
           <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-8 md:p-12 border border-blue-100">
             <p className="text-lg md:text-xl text-gray-700 leading-relaxed text-center">
-              With strategic partnerships and a focus on innovation, we craft technology tailored to your goals. 
-              Our expertise in AI, Data, and Cloud technologies enables us to build future-ready strategies 
-              that adapt to your evolving business needs and drive lasting impact.
+              With strategic partnerships and a focus on innovation, we craft
+              technology tailored to your goals. Our expertise in AI, Data, and
+              Cloud technologies enables us to build future-ready strategies
+              that adapt to your evolving business needs and drive lasting
+              impact.
             </p>
           </div>
         </div>
@@ -159,8 +176,9 @@ const AboutUsPage = () => {
               Our Core Values
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Guided by strong principles and a clear vision, we deliver exceptional value 
-              and build lasting relationships with our clients.
+              Guided by strong principles and a clear vision, we deliver
+              exceptional value and build lasting relationships with our
+              clients.
             </p>
           </div>
 
@@ -168,12 +186,21 @@ const AboutUsPage = () => {
             {companyValues.map((value, index) => {
               const Icon = value.icon;
               return (
-                <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group">
-                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${value.gradient} flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform duration-300`}>
+                <div
+                  key={index}
+                  className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group"
+                >
+                  <div
+                    className={`w-12 h-12 rounded-xl bg-gradient-to-br ${value.gradient} flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform duration-300`}
+                  >
                     <Icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{value.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{value.description}</p>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">
+                    {value.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {value.description}
+                  </p>
                 </div>
               );
             })}
@@ -189,7 +216,8 @@ const AboutUsPage = () => {
               Our Company Culture
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Celebrating innovation, collaboration, and success through memorable moments and team events.
+              Celebrating innovation, collaboration, and success through
+              memorable moments and team events.
             </p>
           </div>
 
