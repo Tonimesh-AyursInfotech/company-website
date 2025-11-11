@@ -17,7 +17,7 @@ const HomePage = () => {
       <TechIntroSection />
       <TechStackCarousel />
       <TestimonialsSection />
-      <CareerSection />
+      {/* <CareerSection /> */}
       <GetInTouch />
     </>
   );

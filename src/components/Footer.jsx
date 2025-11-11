@@ -1,5 +1,6 @@
 import React from "react";
 import { Linkedin, Facebook, Youtube, ChevronUp } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   const scrollToTop = () => {
@@ -12,11 +13,60 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
           {/* Logo Section */}
           <div className="lg:col-span-1">
-            <img
+            {/* <img
               src="https://via.placeholder.com/200x80/86c540/ffffff?text=Cillo+Logo"
               alt="Ayush Infotech"
               className="h-16 w-auto"
-            />
+            /> */}
+
+            <Link
+            to="/"
+            className="text-2xl font-bold tracking-tight bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 bg-clip-text text-transparent hover:from-blue-700 hover:via-indigo-700 hover:to-blue-800 transition-all"
+          >
+            AYURS INFOTECH
+            <div className="text-sm mt-[-7px] tracking-wider bg-gradient-to-r from-blue-500 via-indigo-500 to-blue-600 bg-clip-text text-transparent">
+              Create Your Identity
+            </div>
+          </Link>
+              <div className="flex gap-3 pt-2">
+                <a
+                  href="#"
+                  className="text-green-500 hover:text-green-600 transition-colors"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin className="w-6 h-6" />
+                
+                </a>
+                <a
+                  href="#"
+                  className="text-green-500 hover:text-green-600 transition-colors"
+                  aria-label="Facebook"
+                >
+                  <Facebook className="w-6 h-6" />
+                </a>
+                <a
+                  href="#"
+                  className="text-green-500 hover:text-green-600 transition-colors"
+                  aria-label="X"
+                >
+                  <svg
+                    className="w-6 h-6"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  className="text-green-500 hover:text-green-600 transition-colors"
+                  aria-label="YouTube"
+                >
+                  <Youtube className="w-6 h-6" />
+                </a>
+              </div>
+
+
           </div>
 
           {/* Company Section */}
@@ -112,76 +162,57 @@ export const Footer = () => {
                   +91 9871 32 9458
                 </a>
               </p>
-              <p>
+              {/* <p>
                 <a
                   href="#"
                   className="hover:text-green-500 transition-colors underline"
                 >
                   Send us a message
                 </a>
-              </p>
-              <div className="flex gap-3 pt-2">
-                <a
-                  href="#"
-                  className="text-green-500 hover:text-green-600 transition-colors"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin className="w-6 h-6" />
-                </a>
-                <a
-                  href="#"
-                  className="text-green-500 hover:text-green-600 transition-colors"
-                  aria-label="Facebook"
-                >
-                  <Facebook className="w-6 h-6" />
-                </a>
-                <a
-                  href="#"
-                  className="text-green-500 hover:text-green-600 transition-colors"
-                  aria-label="X"
-                >
-                  <svg
-                    className="w-6 h-6"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                  </svg>
-                </a>
-                <a
-                  href="#"
-                  className="text-green-500 hover:text-green-600 transition-colors"
-                  aria-label="YouTube"
-                >
-                  <Youtube className="w-6 h-6" />
-                </a>
-              </div>
+              </p> */}
+          
             </div>
           </div>
 
           {/* Solution Section */}
-          <div className="border-t border-gray-200 pt-6 pb-6">
+          <div className="border-gray-200 pb-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
               <div className="lg:col-span-1"></div>
               <div>
                 <h3 className="text-gray-900 font-semibold text-lg mb-4">
-                  Solution
+                  Services
                 </h3>
                 <ul className="space-y-3">
                   <li>
                     <a
                       href="#"
-                      className="text-gray-600 hover:text-green-500 transition-colors"
+                      className="text-gray-600 hover:text-green-500 transition-colors whitespace-nowrap"
                     >
-                      Services
+                      Web Development
                     </a>
                   </li>
                   <li>
                     <a
                       href="#"
-                      className="text-gray-600 hover:text-green-500 transition-colors"
+                      className="text-gray-600 hover:text-green-500 transition-colors whitespace-nowrap"
                     >
-                      Case Studies
+                      App Development
+                    </a>
+                  </li>
+                    <li>
+                    <a
+                      href="#"
+                      className="text-gray-600 hover:text-green-500 transition-colors whitespace-nowrap"
+                    >
+                      Data Analytics
+                    </a>
+                  </li>
+                    <li>
+                    <a
+                      href="#"
+                      className="text-gray-600 hover:text-green-500 transition-colors whitespace-nowrap"
+                    >
+                      Talent Acquisition
                     </a>
                   </li>
                 </ul>

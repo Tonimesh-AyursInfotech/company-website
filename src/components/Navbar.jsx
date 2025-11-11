@@ -45,24 +45,25 @@ export default function Navbar() {
               </button>
               {productOpen && (
                 <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl py-2 z-10 border border-blue-100/50 backdrop-blur-sm">
-                  <Link
+                  <a
+                    href="https://www.ayursinfotech.com/"
+                    target="_blank"
+                    className="block px-4 py-3 text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors rounded-lg mx-2 font-medium"
+                  >
+                    EzBox
+                  </a>
+                  {/* <Link
                     to="#"
                     className="block px-4 py-3 text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors rounded-lg mx-2 font-medium"
                   >
-                    Product 1
-                  </Link>
-                  <Link
-                    to="#"
-                    className="block px-4 py-3 text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors rounded-lg mx-2 font-medium"
-                  >
-                    Product 2
-                  </Link>
-                  <Link
+                    Punch Diabetes
+                  </Link> */}
+                  {/* <Link
                     to="#"
                     className="block px-4 py-3 text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors rounded-lg mx-2 font-medium"
                   >
                     Product 3
-                  </Link>
+                  </Link> */}
                 </div>
               )}
             </div>
@@ -86,22 +87,28 @@ export default function Navbar() {
               {servicesOpen && (
                 <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl py-2 z-10 border border-blue-100/50 backdrop-blur-sm">
                   <a
-                    href="#"
+                    href="/services-web-devlopment"
                     className="block px-4 py-3 text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors rounded-lg mx-2 font-medium"
                   >
-                    Service 1
+                    Web Development
                   </a>
                   <a
-                    href="#"
+                    href="/services-app-devlopment"
                     className="block px-4 py-3 text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors rounded-lg mx-2 font-medium"
                   >
-                    Service 2
+                    App Development
                   </a>
                   <a
-                    href="#"
+                    href="/services-data-analytics"
                     className="block px-4 py-3 text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors rounded-lg mx-2 font-medium"
                   >
-                    Service 3
+                    Data Analytics 
+                  </a>
+                   <a
+                    href="/services-it-acquisition"
+                    className="block px-4 py-3 text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors rounded-lg mx-2 font-medium"
+                  >
+                   IT Talent Acquisition
                   </a>
                 </div>
               )}
@@ -157,6 +164,29 @@ export default function Navbar() {
         {mobileMenuOpen && (
           <div className="md:hidden pb-4 border-t border-blue-100/50 mt-2 pt-4">
             <div className="flex flex-col space-y-1">
+
+                       {/* Product Dropdown Mobile */}
+              <button
+                onClick={() => setProductOpen(!productOpen)}
+                className="flex items-center justify-between font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 py-3 px-3 rounded-lg transition-all"
+              >
+                Product
+                <ChevronDown
+                  className={`h-4 w-4 transition-transform duration-200 ${
+                    productOpen ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+              {productOpen && (
+                <div className="pl-4 space-y-1 bg-blue-50/30 py-2 rounded-lg">
+                  <Link
+                    to="#"
+                    className="block text-gray-600 hover:text-blue-700 py-2 px-3 rounded-lg hover:bg-white transition-all"
+                  >
+                    EZ Box
+                  </Link>
+                </div>
+              )}
               {/* Services Dropdown Mobile */}
               <button
                 onClick={() => setServicesOpen(!servicesOpen)}
@@ -175,57 +205,30 @@ export default function Navbar() {
                     to="#"
                     className="block text-gray-600 hover:text-blue-700 py-2 px-3 rounded-lg hover:bg-white transition-all"
                   >
-                    Service 1
+                    Web Development
                   </Link>
                   <Link
                     to="#"
                     className="block text-gray-600 hover:text-blue-700 py-2 px-3 rounded-lg hover:bg-white transition-all"
                   >
-                    Service 2
+                    App Development
                   </Link>
                   <Link
                     to="#"
                     className="block text-gray-600 hover:text-blue-700 py-2 px-3 rounded-lg hover:bg-white transition-all"
                   >
-                    Service 3
+                    Data Analytics
+                  </Link>
+                      <Link
+                    to="#"
+                    className="block text-gray-600 hover:text-blue-700 py-2 px-3 rounded-lg hover:bg-white transition-all"
+                  >
+                    Talent Acquisition
                   </Link>
                 </div>
               )}
 
-              {/* Product Dropdown Mobile */}
-              <button
-                onClick={() => setProductOpen(!productOpen)}
-                className="flex items-center justify-between font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 py-3 px-3 rounded-lg transition-all"
-              >
-                Product
-                <ChevronDown
-                  className={`h-4 w-4 transition-transform duration-200 ${
-                    productOpen ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
-              {productOpen && (
-                <div className="pl-4 space-y-1 bg-blue-50/30 py-2 rounded-lg">
-                  <Link
-                    to="#"
-                    className="block text-gray-600 hover:text-blue-700 py-2 px-3 rounded-lg hover:bg-white transition-all"
-                  >
-                    Product 1
-                  </Link>
-                  <Link
-                    to="#"
-                    className="block text-gray-600 hover:text-blue-700 py-2 px-3 rounded-lg hover:bg-white transition-all"
-                  >
-                    Product 2
-                  </Link>
-                  <Link
-                    to="#"
-                    className="block text-gray-600 hover:text-blue-700 py-2 px-3 rounded-lg hover:bg-white transition-all"
-                  >
-                    Product 3
-                  </Link>
-                </div>
-              )}
+     
 
               {/* Other Links Mobile */}
               <Link
