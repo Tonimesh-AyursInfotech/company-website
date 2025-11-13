@@ -46,8 +46,7 @@ export default function Navbar() {
               {productOpen && (
                 <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl py-2 z-10 border border-blue-100/50 backdrop-blur-sm">
                   <a
-                    href="https://www.ayursinfotech.com/"
-                    target="_blank"
+                    href="/ezboxpage"
                     className="block px-4 py-3 text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors rounded-lg mx-2 font-medium"
                   >
                     EzBox

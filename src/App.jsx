@@ -13,6 +13,7 @@ import ITTalentAcquisitionPage from "./components/servicess/ITTalentAcquisitionP
 import DataSecurityPage from "./components/servicess/DataSecurityPage";
 import OurWorkPage from "./components/OurWorkPage";
 import AboutUsPage from "./components/AboutUsPage";
+import EzBoxPage from "./components/servicess/EzboxPage";
 function App() {
   return (
     <Router>
@@ -27,6 +28,9 @@ function App() {
           <Route path="/services-data-analytics" element={<DataAnalyticsPage />} />
           <Route path="/services-it-acquisition" element={<ITTalentAcquisitionPage />} />
           <Route path="/services-data-security" element={<DataSecurityPage />} />
+          <Route path="/ezboxpage" element={<EzBoxPage />} />
+
+          
           <Route path="/our-work" element={<OurWorkPage />} />
           <Route path="/about-us" element={<AboutUsPage />} />
 
