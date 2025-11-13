@@ -24,72 +24,79 @@ const OurWorkPage = () => {
       id: 1,
       brand: "DISNEY",
       title: "Streaming Platform Enhancement",
-      description: "Revolutionized the user experience for Disney's streaming service with enhanced navigation, personalized recommendations, and seamless cross-device synchronization. The project resulted in a 35% increase in user engagement and 20% higher subscription retention rates.",
+      description:
+        "Revolutionized the user experience for Disney's streaming service with enhanced navigation, personalized recommendations, and seamless cross-device synchronization. The project resulted in a 35% increase in user engagement and 20% higher subscription retention rates.",
       image: "/api/placeholder/600/400",
       technologies: ["React", "Node.js", "AWS", "MongoDB"],
-      link: "#"
+      link: "#",
     },
     {
       id: 2,
       brand: "MARVEL",
       title: "Interactive Fan Experience App",
-      description: "Developed an immersive mobile application that brings Marvel characters to life through AR technology. Features include interactive comics, character customization, and social sharing capabilities. The app garnered over 2 million downloads in the first month.",
+      description:
+        "Developed an immersive mobile application that brings Marvel characters to life through AR technology. Features include interactive comics, character customization, and social sharing capabilities. The app garnered over 2 million downloads in the first month.",
       image: "/api/placeholder/600/400",
       technologies: ["React Native", "AR Kit", "Firebase", "Unity"],
-      link: "#"
+      link: "#",
     },
     {
       id: 3,
       brand: "KFC",
       title: "Digital Ordering System",
-      description: "Created a comprehensive digital ordering platform featuring AI-powered menu recommendations, real-time order tracking, and integrated loyalty programs. The system reduced average order time by 40% and increased mobile orders by 65%.",
+      description:
+        "Created a comprehensive digital ordering platform featuring AI-powered menu recommendations, real-time order tracking, and integrated loyalty programs. The system reduced average order time by 40% and increased mobile orders by 65%.",
       image: "/api/placeholder/600/400",
       technologies: ["Vue.js", "Python", "PostgreSQL", "Redis"],
-      link: "#"
+      link: "#",
     },
     {
       id: 4,
       brand: "Jio",
       title: "Telecom Service Management",
-      description: "Built an enterprise-level telecom management system with real-time analytics, customer service automation, and network monitoring capabilities. The platform handles over 10 million daily transactions with 99.9% uptime.",
+      description:
+        "Built an enterprise-level telecom management system with real-time analytics, customer service automation, and network monitoring capabilities. The platform handles over 10 million daily transactions with 99.9% uptime.",
       image: "/api/placeholder/600/400",
       technologies: ["Angular", "Java", "Kubernetes", "Elasticsearch"],
-      link: "#"
+      link: "#",
     },
     {
       id: 5,
       brand: "PIZZAHUT",
       title: "Coupon Engine Application",
-      description: "Developed a robust coupon engine application to automate the creation and management of promotional offers. Additionally, built a VAPT-approved, customer-facing web platform integrated with the Pizza Hut India app.",
+      description:
+        "Developed a robust coupon engine application to automate the creation and management of promotional offers. Additionally, built a VAPT-approved, customer-facing web platform integrated with the Pizza Hut India app.",
       image: "/api/placeholder/600/400",
       technologies: ["React", "Java", "AWS", "MongoDB", "AES Encryption"],
-      link: "#"
+      link: "#",
     },
     {
       id: 6,
       brand: "UNO MINDA",
       title: "Supply Chain Management System",
-      description: "Implemented an advanced supply chain management system with real-time inventory tracking, automated procurement, and predictive analytics for demand forecasting.",
+      description:
+        "Implemented an advanced supply chain management system with real-time inventory tracking, automated procurement, and predictive analytics for demand forecasting.",
       image: "/api/placeholder/600/400",
       technologies: ["React", "Node.js", "MySQL", "AWS Lambda"],
-      link: "#"
+      link: "#",
     },
     {
       id: 7,
       brand: "NTT DATA",
       title: "Enterprise Data Analytics Platform",
-      description: "Created a comprehensive data analytics platform for enterprise clients, featuring real-time dashboards, predictive modeling, and automated reporting capabilities.",
+      description:
+        "Created a comprehensive data analytics platform for enterprise clients, featuring real-time dashboards, predictive modeling, and automated reporting capabilities.",
       image: "/api/placeholder/600/400",
       technologies: ["Python", "Tableau", "Snowflake", "Apache Spark"],
-      link: "#"
-    }
+      link: "#",
+    },
   ];
 
   const visibleProjectsList = projects.slice(0, visibleCount);
   const hasMoreProjects = visibleCount < projects.length;
 
   const handleShowMore = () => {
-    setVisibleCount(prev => Math.min(prev + 3, projects.length));
+    setVisibleCount((prev) => Math.min(prev + 3, projects.length));
   };
 
   useEffect(() => {
@@ -172,7 +179,7 @@ const OurWorkPage = () => {
             }}
           />
         </div>
-        
+
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
