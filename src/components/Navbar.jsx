@@ -51,6 +51,12 @@ export default function Navbar() {
                   >
                     EzBox
                   </a>
+                   <a
+                    href="/pdpage"
+                    className="block px-4 py-3 text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors rounded-lg mx-2 font-medium"
+                  >
+                    Punch Diabetes
+                  </a>
                   {/* <Link
                     to="#"
                     className="block px-4 py-3 text-gray-600 hover:bg-blue-50 hover:text-blue-700 transition-colors rounded-lg mx-2 font-medium"

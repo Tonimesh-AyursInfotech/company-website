@@ -14,6 +14,7 @@ import DataSecurityPage from "./components/servicess/DataSecurityPage";
 import OurWorkPage from "./components/OurWorkPage";
 import AboutUsPage from "./components/AboutUsPage";
 import EzBoxPage from "./components/servicess/EzboxPage";
+import PunchDiabetesPage from "./components/servicess/PunchDiabetesPage";
 function App() {
   return (
     <Router>
@@ -29,6 +30,8 @@ function App() {
           <Route path="/services-it-acquisition" element={<ITTalentAcquisitionPage />} />
           <Route path="/services-data-security" element={<DataSecurityPage />} />
           <Route path="/ezboxpage" element={<EzBoxPage />} />
+          <Route path="/pdpage" element={<PunchDiabetesPage />} />
+
 
           
           <Route path="/our-work" element={<OurWorkPage />} />
