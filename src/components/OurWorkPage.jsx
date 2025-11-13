@@ -37,6 +37,42 @@ const OurWorkPage = () => {
       ],
       link: "#",
     },
+    {
+      id: 1,
+      brand: "PIZZAHUT",
+      title: "Coupon Engine Application",
+      description:
+        "Developed a robust coupon engine application to automate the creation and management of promotional offers. Additionally, built a VAPT-approved, customer-facing web platform integrated with the Pizza Hut India app to seamlessly showcase the coupons. This solution streamlined marketing operations and enhanced user engagement within the Pizza Hut digital ecosystem.",
+      image: "/pizzahut.png",
+      technologies: [
+        "React",
+        "Java",
+        "AWS",
+        "MongoDB",
+        "AES Encryption",
+        "My Sql",
+        "AWS SNS",
+      ],
+      link: "#",
+    },
+    {
+      id: 1,
+      brand: "PIZZAHUT",
+      title: "Coupon Engine Application",
+      description:
+        "Developed a robust coupon engine application to automate the creation and management of promotional offers. Additionally, built a VAPT-approved, customer-facing web platform integrated with the Pizza Hut India app to seamlessly showcase the coupons. This solution streamlined marketing operations and enhanced user engagement within the Pizza Hut digital ecosystem.",
+      image: "/pizzahut.png",
+      technologies: [
+        "React",
+        "Java",
+        "AWS",
+        "MongoDB",
+        "AES Encryption",
+        "My Sql",
+        "AWS SNS",
+      ],
+      link: "#",
+    },
   ];
 
   useEffect(() => {

@@ -1,9 +1,39 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import useCounter from "../hooks/useCounter";
 
 const HeroSection = () => {
+  const sectionRef = useRef(null);
+  const [startCount, setStartCount] = useState(false);
+
+  // ✅ Intersection Observer A: trigger counters once
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setStartCount(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  // ✅ Animated counters
+  const clients = useCounter(35, 1500, startCount);
+  const associates = useCounter(300, 1500, startCount);
+  const integrations = useCounter(100, 1500, startCount);
+
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section
+      ref={sectionRef}
+      className="relative min-h-screen flex items-center overflow-hidden"
+    >
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img
@@ -42,7 +72,7 @@ const HeroSection = () => {
             <div className="flex items-center gap-2 mb-3">
               <div className="h-1 w-12 bg-[var(--brand-prim)] rounded"></div>
             </div>
-            <div className="text-5xl font-bold text-white mb-2">35+</div>
+            <div className="text-5xl font-bold text-white mb-2">{clients}+</div>
             <div className="text-gray-300 text-lg">Global Clientele</div>
           </div>
 
@@ -51,7 +81,9 @@ const HeroSection = () => {
             <div className="flex items-center gap-2 mb-3">
               <div className="h-1 w-12 bg-[var(--brand-prim)] rounded"></div>
             </div>
-            <div className="text-5xl font-bold text-white mb-2">300+</div>
+            <div className="text-5xl font-bold text-white mb-2">
+              {associates}+
+            </div>
             <div className="text-gray-300 text-lg">Associates</div>
           </div>
 
@@ -60,7 +92,9 @@ const HeroSection = () => {
             <div className="flex items-center gap-2 mb-3">
               <div className="h-1 w-12 bg-[var(--brand-prim)] rounded"></div>
             </div>
-            <div className="text-5xl font-bold text-white mb-2">100+</div>
+            <div className="text-5xl font-bold text-white mb-2">
+              {integrations}+
+            </div>
             <div className="text-gray-300 text-lg">Integrations</div>
           </div>
         </div>
