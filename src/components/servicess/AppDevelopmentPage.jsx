@@ -80,7 +80,7 @@ const AppDevelopmentPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative w-full overflow-hidden bg-gradient-to-br from-purple-900 via-indigo-800 to-purple-900 min-h-[60vh] flex items-center">
+      <section className="relative w-full overflow-hidden bg-[var(--brand-prim)] min-h-[60vh] flex items-center">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div
@@ -97,7 +97,7 @@ const AppDevelopmentPage = () => {
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center">
           <div className="max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-2 bg-purple-800/50 backdrop-blur-sm rounded-full px-4 py-2 mb-6 border border-purple-700/30">
+            <div className="text-sm font-semibold w-fit flex items-center text-center m-auto gap-1 tracking-wider text-blue-200 uppercase bg-[var(--brand-prim)]/50 backdrop-blur-sm px-4 py-2 rounded-full border border-white/30">
               <Smartphone className="w-4 h-4 text-purple-300" />
               <span className="text-sm font-medium text-purple-200">App Development</span>
             </div>

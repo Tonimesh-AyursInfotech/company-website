@@ -103,7 +103,7 @@ const DataSecurityPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative w-full overflow-hidden bg-gradient-to-br from-red-900 via-orange-800 to-red-900 min-h-[60vh] flex items-center">
+      <section className="relative w-full overflow-hidden bg-[var(--brand-prim)] min-h-[60vh] flex items-center">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div
@@ -120,9 +120,9 @@ const DataSecurityPage = () => {
         {/* Content */}
         <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center">
           <div className="max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-2 bg-red-800/50 backdrop-blur-sm rounded-full px-4 py-2 mb-6 border border-red-700/30">
-              <Shield className="w-4 h-4 text-red-300" />
-              <span className="text-sm font-medium text-red-200">Data Security</span>
+            <div className="text-sm font-semibold w-fit flex items-center text-center m-auto gap-1 tracking-wider text-blue-200 uppercase bg-[var(--brand-prim)]/50 backdrop-blur-sm px-4 py-2 rounded-full border border-white/30">
+              <Shield className="w-4 h-4 text-blue-200" />
+              <span className="text-sm font-medium text-blue-200">Data Security</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
@@ -359,3 +359,6 @@ const DataSecurityPage = () => {
 };
 
 export default DataSecurityPage;
+
+
+// bg-gradient-to-br from-red-900 via-orange-800 to-red-900 min-h-[60vh]

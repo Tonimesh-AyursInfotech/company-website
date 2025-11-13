@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 
 const OurWorkPage = () => {
   const [visibleProjects, setVisibleProjects] = useState([]);
-  const [visibleCount, setVisibleCount] = useState(3);
   const projectRefs = useRef([]);
 
   const nav = useNavigate();
@@ -19,95 +18,101 @@ const OurWorkPage = () => {
     "NEXXORRA",
   ];
 
-  const projects = [
+  // const projects = [
+  //   {
+  //     id: 1,
+  //     brand: "PIZZAHUT",
+  //     title: "Coupon Engine Application",
+  //     description:
+  //       "Developed a robust coupon engine application to automate the creation and management of promotional offers. Additionally, built a VAPT-approved, customer-facing web platform integrated with the Pizza Hut India app to seamlessly showcase the coupons. This solution streamlined marketing operations and enhanced user engagement within the Pizza Hut digital ecosystem.",
+  //     image: "/pizzahut.png",
+  //     technologies: [
+  //       "React",
+  //       "Java",
+  //       "AWS",
+  //       "MongoDB",
+  //       "AES Encryption",
+  //       "My Sql",
+  //       "AWS SNS",
+  //     ],
+  //     link: "#",
+  //   },
+  // ];
+
+
+    const projects = [
     {
       id: 1,
       brand: "DISNEY",
       title: "Streaming Platform Enhancement",
-      description:
-        "Revolutionized the user experience for Disney's streaming service with enhanced navigation, personalized recommendations, and seamless cross-device synchronization. The project resulted in a 35% increase in user engagement and 20% higher subscription retention rates.",
+      description: "Revolutionized the user experience for Disney's streaming service with enhanced navigation, personalized recommendations, and seamless cross-device synchronization. The project resulted in a 35% increase in user engagement and 20% higher subscription retention rates.",
       image: "/api/placeholder/600/400",
       technologies: ["React", "Node.js", "AWS", "MongoDB"],
-      link: "#",
+      link: "#"
     },
     {
       id: 2,
       brand: "MARVEL",
       title: "Interactive Fan Experience App",
-      description:
-        "Developed an immersive mobile application that brings Marvel characters to life through AR technology. Features include interactive comics, character customization, and social sharing capabilities. The app garnered over 2 million downloads in the first month.",
+      description: "Developed an immersive mobile application that brings Marvel characters to life through AR technology. Features include interactive comics, character customization, and social sharing capabilities. The app garnered over 2 million downloads in the first month.",
       image: "/api/placeholder/600/400",
       technologies: ["React Native", "AR Kit", "Firebase", "Unity"],
-      link: "#",
+      link: "#"
     },
     {
       id: 3,
       brand: "KFC",
       title: "Digital Ordering System",
-      description:
-        "Created a comprehensive digital ordering platform featuring AI-powered menu recommendations, real-time order tracking, and integrated loyalty programs. The system reduced average order time by 40% and increased mobile orders by 65%.",
+      description: "Created a comprehensive digital ordering platform featuring AI-powered menu recommendations, real-time order tracking, and integrated loyalty programs. The system reduced average order time by 40% and increased mobile orders by 65%.",
       image: "/api/placeholder/600/400",
       technologies: ["Vue.js", "Python", "PostgreSQL", "Redis"],
-      link: "#",
+      link: "#"
     },
     {
       id: 4,
       brand: "Jio",
       title: "Telecom Service Management",
-      description:
-        "Built an enterprise-level telecom management system with real-time analytics, customer service automation, and network monitoring capabilities. The platform handles over 10 million daily transactions with 99.9% uptime.",
+      description: "Built an enterprise-level telecom management system with real-time analytics, customer service automation, and network monitoring capabilities. The platform handles over 10 million daily transactions with 99.9% uptime.",
       image: "/api/placeholder/600/400",
       technologies: ["Angular", "Java", "Kubernetes", "Elasticsearch"],
-      link: "#",
+      link: "#"
     },
-    {
+      {
       id: 5,
-      brand: "PIZZAHUT",
-      title: "Coupon Engine Application",
-      description:
-        "Developed a robust coupon engine application to automate the creation and management of promotional offers. Additionally, built a VAPT-approved, customer-facing web platform integrated with the Pizza Hut India app.",
+      brand: "Jio",
+      title: "Telecom Service Management",
+      description: "Built an enterprise-level telecom management system with real-time analytics, customer service automation, and network monitoring capabilities. The platform handles over 10 million daily transactions with 99.9% uptime.",
       image: "/api/placeholder/600/400",
-      technologies: ["React", "Java", "AWS", "MongoDB", "AES Encryption"],
-      link: "#",
+      technologies: ["Angular", "Java", "Kubernetes", "Elasticsearch"],
+      link: "#"
     },
-    {
+      {
       id: 6,
-      brand: "UNO MINDA",
-      title: "Supply Chain Management System",
-      description:
-        "Implemented an advanced supply chain management system with real-time inventory tracking, automated procurement, and predictive analytics for demand forecasting.",
+      brand: "Jio",
+      title: "Telecom Service Management",
+      description: "Built an enterprise-level telecom management system with real-time analytics, customer service automation, and network monitoring capabilities. The platform handles over 10 million daily transactions with 99.9% uptime.",
       image: "/api/placeholder/600/400",
-      technologies: ["React", "Node.js", "MySQL", "AWS Lambda"],
-      link: "#",
+      technologies: ["Angular", "Java", "Kubernetes", "Elasticsearch"],
+      link: "#"
     },
-    {
+      {
       id: 7,
-      brand: "NTT DATA",
-      title: "Enterprise Data Analytics Platform",
-      description:
-        "Created a comprehensive data analytics platform for enterprise clients, featuring real-time dashboards, predictive modeling, and automated reporting capabilities.",
+      brand: "Jio",
+      title: "Telecom Service Management",
+      description: "Built an enterprise-level telecom management system with real-time analytics, customer service automation, and network monitoring capabilities. The platform handles over 10 million daily transactions with 99.9% uptime.",
       image: "/api/placeholder/600/400",
-      technologies: ["Python", "Tableau", "Snowflake", "Apache Spark"],
-      link: "#",
-    },
+      technologies: ["Angular", "Java", "Kubernetes", "Elasticsearch"],
+      link: "#"
+    }
   ];
-
-  const visibleProjectsList = projects.slice(0, visibleCount);
-  const hasMoreProjects = visibleCount < projects.length;
-
-  const handleShowMore = () => {
-    setVisibleCount((prev) => Math.min(prev + 3, projects.length));
-  };
-
   useEffect(() => {
-    const observers = visibleProjectsList.map((project, index) => {
-      const ref = projectRefs.current[index];
+    const observers = projectRefs.current.map((ref, index) => {
       if (!ref) return;
 
       const observer = new IntersectionObserver(
         ([entry]) => {
           if (entry.isIntersecting) {
-            setVisibleProjects((prev) => [...prev, project.id]);
+            setVisibleProjects((prev) => [...prev, projects[index].id]);
           }
         },
         { threshold: 0.3 }
@@ -120,7 +125,7 @@ const OurWorkPage = () => {
     return () => {
       observers.forEach((observer) => observer?.disconnect());
     };
-  }, [visibleProjectsList]);
+  }, []);
 
   const isProjectVisible = (projectId) => visibleProjects.includes(projectId);
 
@@ -153,7 +158,14 @@ const OurWorkPage = () => {
 
             <h1 className="text-4xl md:text-2xl lg:text-4xl font-bold text-white mb-6 leading-tight">
               We provide IT services that fuel your success. <br />
+              {/* <span className="bg-gradient-to-r from-blue-200 to-cyan-200 bg-clip-text text-transparent">
+                That Vow Your Success
+              </span> */}
             </h1>
+
+            {/* <p className="text-xl md:text-2xl text-blue-100/90 max-w-3xl mx-auto leading-relaxed mb-8">
+              Transforming businesses through innovative technology solutions and exceptional digital experiences.
+            </p> */}
 
             <button
               className="inline-flex items-center gap-3 bg-transparent text-white font-semibold px-8 py-4 border border-white rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 group"
@@ -169,6 +181,7 @@ const OurWorkPage = () => {
       </section>
 
       {/* Brands Section */}
+
       <section className="relative py-20 overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50/30 to-slate-50">
         {/* Subtle Background Pattern */}
         <div className="absolute inset-0 opacity-5">
@@ -179,7 +192,7 @@ const OurWorkPage = () => {
             }}
           />
         </div>
-
+        {/* <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50/30"> */}
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -187,7 +200,7 @@ const OurWorkPage = () => {
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               We are proud to have partnered with some of the leading brands,
-              delivering services that drive impact and growth.
+              delivering servicess that drive impact and growth.
             </p>
           </div>
 
@@ -230,7 +243,7 @@ const OurWorkPage = () => {
           </div>
 
           <div className="space-y-32">
-            {visibleProjectsList.map((project, index) => (
+            {projects.map((project, index) => (
               <div
                 key={project.id}
                 ref={(el) => (projectRefs.current[index] = el)}
@@ -270,6 +283,11 @@ const OurWorkPage = () => {
                   }`}
                 >
                   <div className="max-w-lg mx-auto lg:mx-0">
+                    {/* <div className="inline-flex items-center gap-2 text-blue-600 font-semibold mb-4">
+                      <span>Case Study</span>
+                      <div className="w-8 h-px bg-blue-600" />
+                    </div> */}
+
                     <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
                       {project.title}
                     </h3>
@@ -289,39 +307,17 @@ const OurWorkPage = () => {
                         </span>
                       ))}
                     </div>
+
+                    {/* CTA Button */}
+                    {/* <button className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 group">
+                      View Case Study
+                      <ExternalLink className="w-4 h-4 transform group-hover:scale-110 transition-transform duration-300" />
+                    </button> */}
                   </div>
                 </div>
               </div>
             ))}
           </div>
-
-          {/* Show More Button */}
-          {hasMoreProjects && (
-            <div className="text-center mt-16">
-              <button
-                onClick={handleShowMore}
-                className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 group"
-              >
-                Show More Success Stories
-                <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" />
-              </button>
-              <p className="text-gray-500 mt-4">
-                Showing {visibleCount} of {projects.length} Succes Stories
-              </p>
-            </div>
-          )}
-
-          {/* Show Less Button when all projects are visible */}
-          {visibleCount >= projects.length && projects.length > 3 && (
-            <div className="text-center mt-8">
-              <button
-                onClick={() => setVisibleCount(3)}
-                className="inline-flex items-center gap-3 bg-gray-200 hover:bg-gray-300 text-gray-700 font-semibold px-6 py-3 rounded-xl transition-all duration-300"
-              >
-                Show Less
-              </button>
-            </div>
-          )}
         </div>
       </section>
 
