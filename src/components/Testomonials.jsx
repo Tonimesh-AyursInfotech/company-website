@@ -4,48 +4,92 @@ import { ChevronLeft, ChevronRight, MessageSquare } from "lucide-react";
 const TestimonialsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  // const testimonials = [
+  //   {
+  //     id: 1,
+  //     quote:
+  //       "CloudKaptan has provided us with customized development services on the Salesforce platform, and we are highly impressed with their expertise and commitment to a well-structured process. The team consistently proves their availability and responsiveness whenever we require their assistance. Their meticulous attention to detail and their ability to adapt to evolving project requirements have been instrumental to the project's success. They have done a great job, thanks to the entire team for their exceptional work.",
+  //     author: "Vikash Kothari",
+  //     position: "CEO, Infovity",
+  //     avatar: "VK",
+  //     company: "infovity",
+  //     bgColor: "bg-teal-500",
+  //   },
+  //   {
+  //     id: 2,
+  //     quote:
+  //       "Pioneer has leveraged the strategic and development expertise of CloudKaptan for the initial build, enhancements, and ongoing maintenance of our Salesforce-based lending system for several years. The team at CloudKaptan is extremely responsive to our requests and a great partner in planning out our future technology needs. We highly recommend their services for upstart and established financial companies.",
+  //     author: "Rich Brown",
+  //     position: "Co-Founder and Chief Operating Officer, Pioneer",
+  //     avatar: "RB",
+  //     company: "PIONEER",
+  //     bgColor: "bg-blue-600",
+  //   },
+  //   {
+  //     id: 3,
+  //     quote:
+  //       "Working with CloudKaptan has been an absolute game-changer for our business. Their team's deep understanding of modern technologies and their ability to deliver scalable solutions has helped us achieve our digital transformation goals. The quality of their work and dedication to our success is unmatched.",
+  //     author: "Sarah Johnson",
+  //     position: "CTO, TechVision",
+  //     avatar: "SJ",
+  //     company: "TechVision",
+  //     bgColor: "bg-purple-600",
+  //   },
+  //   {
+  //     id: 4,
+  //     quote:
+  //       "The expertise and professionalism demonstrated by CloudKaptan's team exceeded our expectations. They took the time to understand our unique challenges and delivered a solution that not only met but surpassed our requirements. Their ongoing support and commitment to excellence makes them a trusted technology partner.",
+  //     author: "Michael Chen",
+  //     position: "Director of Engineering, InnovateCorp",
+  //     avatar: "MC",
+  //     company: "InnovateCorp",
+  //     bgColor: "bg-indigo-600",
+  //   },
+  // ];
+
+
   const testimonials = [
-    {
-      id: 1,
-      quote:
-        "CloudKaptan has provided us with customized development services on the Salesforce platform, and we are highly impressed with their expertise and commitment to a well-structured process. The team consistently proves their availability and responsiveness whenever we require their assistance. Their meticulous attention to detail and their ability to adapt to evolving project requirements have been instrumental to the project's success. They have done a great job, thanks to the entire team for their exceptional work.",
-      author: "Vikash Kothari",
-      position: "CEO, Infovity",
-      avatar: "VK",
-      company: "infovity",
-      bgColor: "bg-teal-500",
-    },
-    {
-      id: 2,
-      quote:
-        "Pioneer has leveraged the strategic and development expertise of CloudKaptan for the initial build, enhancements, and ongoing maintenance of our Salesforce-based lending system for several years. The team at CloudKaptan is extremely responsive to our requests and a great partner in planning out our future technology needs. We highly recommend their services for upstart and established financial companies.",
-      author: "Rich Brown",
-      position: "Co-Founder and Chief Operating Officer, Pioneer",
-      avatar: "RB",
-      company: "PIONEER",
-      bgColor: "bg-blue-600",
-    },
-    {
-      id: 3,
-      quote:
-        "Working with CloudKaptan has been an absolute game-changer for our business. Their team's deep understanding of modern technologies and their ability to deliver scalable solutions has helped us achieve our digital transformation goals. The quality of their work and dedication to our success is unmatched.",
-      author: "Sarah Johnson",
-      position: "CTO, TechVision",
-      avatar: "SJ",
-      company: "TechVision",
-      bgColor: "bg-purple-600",
-    },
-    {
-      id: 4,
-      quote:
-        "The expertise and professionalism demonstrated by CloudKaptan's team exceeded our expectations. They took the time to understand our unique challenges and delivered a solution that not only met but surpassed our requirements. Their ongoing support and commitment to excellence makes them a trusted technology partner.",
-      author: "Michael Chen",
-      position: "Director of Engineering, InnovateCorp",
-      avatar: "MC",
-      company: "InnovateCorp",
-      bgColor: "bg-indigo-600",
-    },
-  ];
+  {
+    id: 1,
+    quote:
+      "Ayurs Infotech has been instrumental in transforming our operational workflows with their custom software solutions. Their team combines deep technical expertise with a strong understanding of business needs, enabling us to scale efficiently. Their timely delivery, transparency, and commitment to excellence truly make them a reliable technology partner.",
+    author: "Arun Prakash",
+    position: "Founder & CEO, NexaCore Solutions",
+    avatar: "AP",
+    company: "NexaCore",
+    bgColor: "bg-cyan-600",
+  },
+  {
+    id: 2,
+    quote:
+      "Working with Ayurs Infotech has been a seamless experience. They supported us through product modernization and provided continuous enhancements without disrupting our existing operations. The responsiveness and clarity in communication from their team have been outstanding. We would highly recommend them for any technology-driven initiatives.",
+    author: "Priya Sharma",
+    position: "Product Manager, Stratify Tech",
+    avatar: "PS",
+    company: "Stratify Tech",
+    bgColor: "bg-cyan-600",
+  },
+  {
+    id: 3,
+    quote:
+      "Ayurs Infotech brought our vision to life with a robust and scalable cloud-based application. Their engineers showcased exceptional problem-solving skills and demonstrated a deep commitment to quality. The project exceeded our expectations, and we continue to rely on them for long-term support and enhancements.",
+    author: "Rahul Mehta",
+    position: "CTO, FinBridge Analytics",
+    avatar: "RM",
+    company: "FinBridge",
+    bgColor: "bg-cyan-600",
+  },
+  {
+    id: 4,
+    quote:
+      "Partnering with Ayurs Infotech has been a major win for our organization. They take the time to understand complex challenges and deliver efficient, well-architected solutions. Their dedication, technical capability, and proactive approach make them one of the best teams we've collaborated with.",
+    author: "Divya Nair",
+    position: "Director of Technology, VisionGrid",
+    avatar: "DN",
+    company: "VisionGrid",
+    bgColor: "bg-cyan-600",
+  },
+];
 
   const nextTestimonial = () => {
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
