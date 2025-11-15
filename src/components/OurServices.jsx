@@ -7,9 +7,11 @@ import {
   ArrowRight,
   Shield,
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export const OurServices = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
+  const nav = useNavigate();
 
   const services = [
     {
@@ -20,6 +22,7 @@ export const OurServices = () => {
       description:
         "Create high-performance, visually refined websites that amplify your brand and deliver real business impact.",
       gradient: "from-blue-600 to-indigo-700",
+      link: "/services-web-devlopment"
     },
     {
       id: 2,
@@ -29,6 +32,7 @@ export const OurServices = () => {
       description:
         "Design and build intuitive mobile and desktop apps that offer seamless, user-focused experiences.",
       gradient: "from-indigo-600 to-purple-700",
+      link: "/services-app-devlopment"
     },
     {
       id: 3,
@@ -38,6 +42,7 @@ export const OurServices = () => {
       description:
         "Implement robust security measures and encryption protocols to safeguard your sensitive data and ensure regulatory compliance.",
       gradient: "from-red-600 to-orange-700",
+      link:"/services-data-security"
     },
     {
       id: 4,
@@ -47,6 +52,7 @@ export const OurServices = () => {
       description:
         "Unlock insights with advanced analytics. Collect, analyze, and visualize data to power strategic growth.",
       gradient: "from-blue-700 to-cyan-600",
+      link:"/services-data-analytics"
     },
     {
       id: 5,
@@ -56,6 +62,7 @@ export const OurServices = () => {
       description:
         "Source expert tech professionals aligned with your vision, ensuring successful project execution.",
       gradient: "from-indigo-700 to-blue-800",
+      link: "/services-it-acquisition"
     },
   ];
 
@@ -132,7 +139,9 @@ export const OurServices = () => {
                     </p>
 
                     {/* Learn More Link */}
-                    <div className="flex items-center text-[var(--brand-prim)] font-semibold group/link">
+                    <div className="flex items-center text-[var(--brand-prim)] font-semibold group/link cursor-pointer" onClick={()=>{nav(service.link);
+                       window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}>
                       <span className="group-hover:text-indigo-600 transition-colors duration-300">
                         Learn More
                       </span>
